@@ -3,9 +3,12 @@ import React from "react";
 import layout from './layout.module.css'
 
 const Layout = ({ title, descr, urlBg = null, colorBg= null }) => {
-    const bg = urlBg ? {backgroundImage: `url(${urlBg})`} : {backgroundColor: `${colorBg}`}
+    // const bg = urlBg ? {backgroundImage: `url(${urlBg})`} : {backgroundColor: `${colorBg}`}
+    const style = {};
+    if (urlBg) { style.backgroundImage = `url(${urlBg})` }
+    if (colorBg) { style.backgroundColor = colorBg }
     return (
-<section style={bg}  className={layout.root}>
+<section style={style}  className={layout.root}>
     <div className={layout.wrapper}>
         <article>
             <div className={layout.title}>

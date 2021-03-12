@@ -4,7 +4,8 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Layout from "./components/Layout/Layout";
 import Footer from "./components/Footer/Footer";
-import pokemon from "./assets/img/bg1.jpg"
+import pokemonBgOne from "./assets/img/bg1.jpg"
+import pokemonBgTwo from "./assets/img/bg2.jpg"
 
 function App() {
 
@@ -17,17 +18,17 @@ function App() {
             <Layout
                 title="This is title layout block one"
                 descr="This is Description layout block! one"
-                urlBg={pokemon}
+                urlBg={pokemonBgTwo}
             />
             <Layout
                 title="This is title layout block two"
                 descr="This is Description layout block! two"
-                colorBg="red"
+                colorBg="grey"
             />
             <Layout
                 title="This is title layout block three"
                 descr="This is Description layout block! three"
-                urlBg={pokemon}
+                urlBg={pokemonBgOne}
             />
             <Footer/>
         </>
