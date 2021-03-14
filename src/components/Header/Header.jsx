@@ -1,6 +1,6 @@
 import React from "react";
 
-import header from './header.module.css'
+import header from './header.module.css';
 
 
 const Header = ({title, descr}) => {

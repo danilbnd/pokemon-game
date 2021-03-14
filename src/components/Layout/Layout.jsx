@@ -2,11 +2,11 @@ import React from "react";
 
 import layout from './layout.module.css'
 
-const Layout = ({ title, descr, urlBg = null, colorBg= null }) => {
-    // const bg = urlBg ? {backgroundImage: `url(${urlBg})`} : {backgroundColor: `${colorBg}`}
+const Layout = ({ title, urlBg = null, colorBg= null, children, colorTitle}) => {
     const style = {};
     if (urlBg) { style.backgroundImage = `url(${urlBg})` }
     if (colorBg) { style.backgroundColor = colorBg }
+    if (colorTitle) { style.color = colorTitle }
     return (
 <section style={style}  className={layout.root}>
     <div className={layout.wrapper}>
@@ -18,9 +18,7 @@ const Layout = ({ title, descr, urlBg = null, colorBg= null }) => {
                 <span className={layout.separator}></span>
             </div>
             <div className={`${layout.desc} ${layout.full}`}>
-                {
-                    descr ? (<p>{descr}</p>) : null
-                }
+                {children}
             </div>
         </article>
     </div>
